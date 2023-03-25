@@ -1,0 +1,17 @@
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\bin\Debug\net7.0-windows\AudioSteganography.exe
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\bin\Debug\net7.0-windows\AudioSteganography.deps.json
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\bin\Debug\net7.0-windows\AudioSteganography.runtimeconfig.json
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\bin\Debug\net7.0-windows\AudioSteganography.dll
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\bin\Debug\net7.0-windows\AudioSteganography.pdb
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.csproj.AssemblyReference.cache
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.csproj.GenerateResource.cache
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.AssemblyInfoInputs.cache
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.AssemblyInfo.cs
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.csproj.CoreCompileInputs.cache
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.dll
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\refint\AudioSteganography.dll
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.pdb
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.genruntimeconfig.cache
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\ref\AudioSteganography.dll
+C:\Users\Liri\Desktop\Tema\AudioSteganography\AudioSteganography\AudioSteganography\obj\Debug\net7.0-windows\AudioSteganography.AudioStegForm.resources
