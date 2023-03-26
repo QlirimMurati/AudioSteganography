@@ -30,8 +30,10 @@
         {
             this.decodeTab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblSecretKeyEncode = new System.Windows.Forms.Label();
-            this.txtSecretKeyEncode = new System.Windows.Forms.TextBox();
+            this.btnUploadPublicKeyEncode = new System.Windows.Forms.Button();
+            this.btnResetEncode = new System.Windows.Forms.Button();
+            this.lblPublicKeyEncode = new System.Windows.Forms.Label();
+            this.txtPublicKeyEncode = new System.Windows.Forms.TextBox();
             this.lblTextToEncode = new System.Windows.Forms.Label();
             this.lblAudioFileEncode = new System.Windows.Forms.Label();
             this.txtTextFilePathEncode = new System.Windows.Forms.TextBox();
@@ -44,8 +46,10 @@
             this.progressEncode = new System.Windows.Forms.ProgressBar();
             this.btnUploadAudioEncode = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblSecretKeyDecode = new System.Windows.Forms.Label();
-            this.txtSecretKeyDecode = new System.Windows.Forms.TextBox();
+            this.btnUploadPrivateKeyDecode = new System.Windows.Forms.Button();
+            this.btnResetDecode = new System.Windows.Forms.Button();
+            this.lblPrivateKeyDecode = new System.Windows.Forms.Label();
+            this.txtPrivateKeyDecode = new System.Windows.Forms.TextBox();
             this.lblDecodedText = new System.Windows.Forms.Label();
             this.lblAudioFileDecode = new System.Windows.Forms.Label();
             this.btnDecode = new System.Windows.Forms.Button();
@@ -70,8 +74,10 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.lblSecretKeyEncode);
-            this.tabPage1.Controls.Add(this.txtSecretKeyEncode);
+            this.tabPage1.Controls.Add(this.btnUploadPublicKeyEncode);
+            this.tabPage1.Controls.Add(this.btnResetEncode);
+            this.tabPage1.Controls.Add(this.lblPublicKeyEncode);
+            this.tabPage1.Controls.Add(this.txtPublicKeyEncode);
             this.tabPage1.Controls.Add(this.lblTextToEncode);
             this.tabPage1.Controls.Add(this.lblAudioFileEncode);
             this.tabPage1.Controls.Add(this.txtTextFilePathEncode);
@@ -91,22 +97,42 @@
             this.tabPage1.Text = "Encode";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // lblSecretKeyEncode
+            // btnUploadPublicKeyEncode
             // 
-            this.lblSecretKeyEncode.AutoSize = true;
-            this.lblSecretKeyEncode.Location = new System.Drawing.Point(9, 309);
-            this.lblSecretKeyEncode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSecretKeyEncode.Name = "lblSecretKeyEncode";
-            this.lblSecretKeyEncode.Size = new System.Drawing.Size(60, 15);
-            this.lblSecretKeyEncode.TabIndex = 12;
-            this.lblSecretKeyEncode.Text = "Secret key";
+            this.btnUploadPublicKeyEncode.Location = new System.Drawing.Point(298, 327);
+            this.btnUploadPublicKeyEncode.Name = "btnUploadPublicKeyEncode";
+            this.btnUploadPublicKeyEncode.Size = new System.Drawing.Size(112, 24);
+            this.btnUploadPublicKeyEncode.TabIndex = 14;
+            this.btnUploadPublicKeyEncode.Text = "Upload key";
+            this.btnUploadPublicKeyEncode.UseVisualStyleBackColor = true;
+            this.btnUploadPublicKeyEncode.Click += new System.EventHandler(this.btnUploadPublicKeyEncode_Click);
             // 
-            // txtSecretKeyEncode
+            // btnResetEncode
             // 
-            this.txtSecretKeyEncode.Location = new System.Drawing.Point(8, 327);
-            this.txtSecretKeyEncode.Name = "txtSecretKeyEncode";
-            this.txtSecretKeyEncode.Size = new System.Drawing.Size(402, 23);
-            this.txtSecretKeyEncode.TabIndex = 11;
+            this.btnResetEncode.Location = new System.Drawing.Point(182, 403);
+            this.btnResetEncode.Name = "btnResetEncode";
+            this.btnResetEncode.Size = new System.Drawing.Size(112, 28);
+            this.btnResetEncode.TabIndex = 13;
+            this.btnResetEncode.Text = "Reset";
+            this.btnResetEncode.UseVisualStyleBackColor = true;
+            this.btnResetEncode.Click += new System.EventHandler(this.btnResetEncode_Click);
+            // 
+            // lblPublicKeyEncode
+            // 
+            this.lblPublicKeyEncode.AutoSize = true;
+            this.lblPublicKeyEncode.Location = new System.Drawing.Point(9, 309);
+            this.lblPublicKeyEncode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPublicKeyEncode.Name = "lblPublicKeyEncode";
+            this.lblPublicKeyEncode.Size = new System.Drawing.Size(61, 15);
+            this.lblPublicKeyEncode.TabIndex = 12;
+            this.lblPublicKeyEncode.Text = "Public key";
+            // 
+            // txtPublicKeyEncode
+            // 
+            this.txtPublicKeyEncode.Location = new System.Drawing.Point(8, 327);
+            this.txtPublicKeyEncode.Name = "txtPublicKeyEncode";
+            this.txtPublicKeyEncode.Size = new System.Drawing.Size(286, 23);
+            this.txtPublicKeyEncode.TabIndex = 11;
             // 
             // lblTextToEncode
             // 
@@ -131,18 +157,17 @@
             // txtTextFilePathEncode
             // 
             this.txtTextFilePathEncode.Location = new System.Drawing.Point(9, 85);
-            this.txtTextFilePathEncode.Multiline = true;
             this.txtTextFilePathEncode.Name = "txtTextFilePathEncode";
-            this.txtTextFilePathEncode.Size = new System.Drawing.Size(285, 28);
+            this.txtTextFilePathEncode.Size = new System.Drawing.Size(285, 23);
             this.txtTextFilePathEncode.TabIndex = 8;
             // 
             // btnUploadTextFileEncode
             // 
             this.btnUploadTextFileEncode.Location = new System.Drawing.Point(298, 85);
             this.btnUploadTextFileEncode.Name = "btnUploadTextFileEncode";
-            this.btnUploadTextFileEncode.Size = new System.Drawing.Size(112, 28);
+            this.btnUploadTextFileEncode.Size = new System.Drawing.Size(112, 24);
             this.btnUploadTextFileEncode.TabIndex = 7;
-            this.btnUploadTextFileEncode.Text = "Text file";
+            this.btnUploadTextFileEncode.Text = "Upload txt";
             this.btnUploadTextFileEncode.UseVisualStyleBackColor = true;
             this.btnUploadTextFileEncode.Click += new System.EventHandler(this.btnUploadTextFile_Click);
             // 
@@ -154,6 +179,7 @@
             this.btnEncode.TabIndex = 6;
             this.btnEncode.Text = "Encode";
             this.btnEncode.UseVisualStyleBackColor = true;
+            this.btnEncode.Click += new System.EventHandler(this.btnEncode_Click);
             // 
             // radioTextFileEncode
             // 
@@ -190,9 +216,8 @@
             // txtAudioPathEncode
             // 
             this.txtAudioPathEncode.Location = new System.Drawing.Point(9, 22);
-            this.txtAudioPathEncode.Multiline = true;
             this.txtAudioPathEncode.Name = "txtAudioPathEncode";
-            this.txtAudioPathEncode.Size = new System.Drawing.Size(285, 28);
+            this.txtAudioPathEncode.Size = new System.Drawing.Size(285, 23);
             this.txtAudioPathEncode.TabIndex = 2;
             // 
             // progressEncode
@@ -204,9 +229,9 @@
             // 
             // btnUploadAudioEncode
             // 
-            this.btnUploadAudioEncode.Location = new System.Drawing.Point(298, 22);
+            this.btnUploadAudioEncode.Location = new System.Drawing.Point(297, 22);
             this.btnUploadAudioEncode.Name = "btnUploadAudioEncode";
-            this.btnUploadAudioEncode.Size = new System.Drawing.Size(112, 28);
+            this.btnUploadAudioEncode.Size = new System.Drawing.Size(112, 24);
             this.btnUploadAudioEncode.TabIndex = 0;
             this.btnUploadAudioEncode.Text = "Upload audio";
             this.btnUploadAudioEncode.UseVisualStyleBackColor = true;
@@ -214,8 +239,10 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lblSecretKeyDecode);
-            this.tabPage2.Controls.Add(this.txtSecretKeyDecode);
+            this.tabPage2.Controls.Add(this.btnUploadPrivateKeyDecode);
+            this.tabPage2.Controls.Add(this.btnResetDecode);
+            this.tabPage2.Controls.Add(this.lblPrivateKeyDecode);
+            this.tabPage2.Controls.Add(this.txtPrivateKeyDecode);
             this.tabPage2.Controls.Add(this.lblDecodedText);
             this.tabPage2.Controls.Add(this.lblAudioFileDecode);
             this.tabPage2.Controls.Add(this.btnDecode);
@@ -231,22 +258,42 @@
             this.tabPage2.Text = "Decode";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblSecretKeyDecode
+            // btnUploadPrivateKeyDecode
             // 
-            this.lblSecretKeyDecode.AutoSize = true;
-            this.lblSecretKeyDecode.Location = new System.Drawing.Point(10, 60);
-            this.lblSecretKeyDecode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSecretKeyDecode.Name = "lblSecretKeyDecode";
-            this.lblSecretKeyDecode.Size = new System.Drawing.Size(60, 15);
-            this.lblSecretKeyDecode.TabIndex = 14;
-            this.lblSecretKeyDecode.Text = "Secret key";
+            this.btnUploadPrivateKeyDecode.Location = new System.Drawing.Point(297, 78);
+            this.btnUploadPrivateKeyDecode.Name = "btnUploadPrivateKeyDecode";
+            this.btnUploadPrivateKeyDecode.Size = new System.Drawing.Size(112, 24);
+            this.btnUploadPrivateKeyDecode.TabIndex = 16;
+            this.btnUploadPrivateKeyDecode.Text = "Upload key";
+            this.btnUploadPrivateKeyDecode.UseVisualStyleBackColor = true;
+            this.btnUploadPrivateKeyDecode.Click += new System.EventHandler(this.btnUploadPrivateKeyDecode_Click);
             // 
-            // txtSecretKeyDecode
+            // btnResetDecode
             // 
-            this.txtSecretKeyDecode.Location = new System.Drawing.Point(9, 78);
-            this.txtSecretKeyDecode.Name = "txtSecretKeyDecode";
-            this.txtSecretKeyDecode.Size = new System.Drawing.Size(402, 23);
-            this.txtSecretKeyDecode.TabIndex = 13;
+            this.btnResetDecode.Location = new System.Drawing.Point(182, 403);
+            this.btnResetDecode.Name = "btnResetDecode";
+            this.btnResetDecode.Size = new System.Drawing.Size(112, 28);
+            this.btnResetDecode.TabIndex = 15;
+            this.btnResetDecode.Text = "Reset";
+            this.btnResetDecode.UseVisualStyleBackColor = true;
+            this.btnResetDecode.Click += new System.EventHandler(this.btnResetDecode_Click);
+            // 
+            // lblPrivateKeyDecode
+            // 
+            this.lblPrivateKeyDecode.AutoSize = true;
+            this.lblPrivateKeyDecode.Location = new System.Drawing.Point(10, 60);
+            this.lblPrivateKeyDecode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrivateKeyDecode.Name = "lblPrivateKeyDecode";
+            this.lblPrivateKeyDecode.Size = new System.Drawing.Size(64, 15);
+            this.lblPrivateKeyDecode.TabIndex = 14;
+            this.lblPrivateKeyDecode.Text = "Private key";
+            // 
+            // txtPrivateKeyDecode
+            // 
+            this.txtPrivateKeyDecode.Location = new System.Drawing.Point(9, 78);
+            this.txtPrivateKeyDecode.Name = "txtPrivateKeyDecode";
+            this.txtPrivateKeyDecode.Size = new System.Drawing.Size(285, 23);
+            this.txtPrivateKeyDecode.TabIndex = 13;
             // 
             // lblDecodedText
             // 
@@ -270,7 +317,7 @@
             // 
             // btnDecode
             // 
-            this.btnDecode.Location = new System.Drawing.Point(297, 403);
+            this.btnDecode.Location = new System.Drawing.Point(299, 403);
             this.btnDecode.Name = "btnDecode";
             this.btnDecode.Size = new System.Drawing.Size(112, 28);
             this.btnDecode.TabIndex = 7;
@@ -287,7 +334,7 @@
             // 
             // progressDecode
             // 
-            this.progressDecode.Location = new System.Drawing.Point(9, 369);
+            this.progressDecode.Location = new System.Drawing.Point(8, 365);
             this.progressDecode.Name = "progressDecode";
             this.progressDecode.Size = new System.Drawing.Size(400, 20);
             this.progressDecode.TabIndex = 5;
@@ -295,19 +342,19 @@
             // txtAudioPathDecode
             // 
             this.txtAudioPathDecode.Location = new System.Drawing.Point(9, 22);
-            this.txtAudioPathDecode.Multiline = true;
             this.txtAudioPathDecode.Name = "txtAudioPathDecode";
-            this.txtAudioPathDecode.Size = new System.Drawing.Size(285, 28);
+            this.txtAudioPathDecode.Size = new System.Drawing.Size(285, 23);
             this.txtAudioPathDecode.TabIndex = 4;
             // 
             // btnUploadAudioDecode
             // 
             this.btnUploadAudioDecode.Location = new System.Drawing.Point(297, 22);
             this.btnUploadAudioDecode.Name = "btnUploadAudioDecode";
-            this.btnUploadAudioDecode.Size = new System.Drawing.Size(112, 28);
+            this.btnUploadAudioDecode.Size = new System.Drawing.Size(112, 24);
             this.btnUploadAudioDecode.TabIndex = 3;
             this.btnUploadAudioDecode.Text = "Upload audio";
             this.btnUploadAudioDecode.UseVisualStyleBackColor = true;
+            this.btnUploadAudioDecode.Click += new System.EventHandler(this.btnUploadAudioDecode_Click);
             // 
             // AudioStegForm
             // 
@@ -349,9 +396,14 @@
         private Label lblAudioFileEncode;
         private Label lblDecodedText;
         private Label lblAudioFileDecode;
-        private Label lblSecretKeyEncode;
-        private TextBox txtSecretKeyEncode;
+        private Label lblPublicKeyEncode;
+        private TextBox txtPublicKeyEncode;
         private Label lblSecretKeyDecode;
-        private TextBox txtSecretKeyDecode;
+        private TextBox txtPrivateKeyDecode;
+        private Button btnResetEncode;
+        private Button btnResetDecode;
+        private Button btnUploadPublicKeyEncode;
+        private Button btnUploadPrivateKeyDecode;
+        private Label lblPrivateKeyDecode;
     }
 }

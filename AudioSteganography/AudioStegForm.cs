@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace AudioSteganography
@@ -58,5 +59,68 @@ namespace AudioSteganography
                 }
             }
         }
+
+        private async void btnUploadPublicKeyEncode_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Public Key (.xml)|*.xml";
+            dialog.Title = "Select a Public Key";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                txtPublicKeyEncode.Text = dialog.FileName;
+                RSAParameters publicKey = AudioSteganography.ReadPublicKeyFromXmlFile(txtPublicKeyEncode.Text);
+                var encoded = await AudioSteganography.Encrypt("test encrypt", publicKey);
+                File.WriteAllBytes(@"C:\Users\Liri\Desktop\Tema\encryptedTest.txt", encoded);
+            }
+        }
+
+        private void btnEncode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btnUploadAudioDecode_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Wave Audio Files (*.wav)|*.wav";
+            dialog.Title = "Select a Wave Audio File";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                txtAudioPathDecode.Text = dialog.FileName;
+            }
+        }
+
+
+        private async void btnUploadPrivateKeyDecode_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Private Key (.xml)|*.xml";
+            dialog.Title = "Select a Private Key";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                txtPrivateKeyDecode.Text = dialog.FileName;
+                var message = File.ReadAllBytes(@"C:\Users\Liri\Desktop\Tema\encryptedTest.txt");
+                RSAParameters privateKey = AudioSteganography.ReadPrivateKeyFromXmlFile(txtPrivateKeyDecode.Text);
+                var decoded = await AudioSteganography.Decrypt(message, privateKey);
+                txtAreaDecode.Text = decoded;
+            }
+        }
+
+        private void btnResetEncode_Click(object sender, EventArgs e)
+        {
+            txtAudioPathEncode.Text = "";
+            txtTextFilePathEncode.Text = "";
+            txtAreaEncode.Text = "";
+            txtPublicKeyEncode.Text = "";
+        }
+
+        private void btnResetDecode_Click(object sender, EventArgs e)
+        {
+            txtAudioPathDecode.Text = "";
+            txtPrivateKeyDecode.Text = "";
+            txtAreaDecode.Text = "";
+        }
+
     }
 }
