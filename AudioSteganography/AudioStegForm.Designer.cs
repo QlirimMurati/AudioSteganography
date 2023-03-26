@@ -225,6 +225,7 @@
             this.progressEncode.Location = new System.Drawing.Point(8, 365);
             this.progressEncode.Name = "progressEncode";
             this.progressEncode.Size = new System.Drawing.Size(401, 20);
+            this.progressEncode.Step = 1;
             this.progressEncode.TabIndex = 1;
             // 
             // btnUploadAudioEncode
@@ -323,6 +324,7 @@
             this.btnDecode.TabIndex = 7;
             this.btnDecode.Text = "Decode";
             this.btnDecode.UseVisualStyleBackColor = true;
+            this.btnDecode.Click += new System.EventHandler(this.btnDecode_Click);
             // 
             // txtAreaDecode
             // 
@@ -337,6 +339,7 @@
             this.progressDecode.Location = new System.Drawing.Point(8, 365);
             this.progressDecode.Name = "progressDecode";
             this.progressDecode.Size = new System.Drawing.Size(400, 20);
+            this.progressDecode.Step = 1;
             this.progressDecode.TabIndex = 5;
             // 
             // txtAudioPathDecode
@@ -363,7 +366,7 @@
             this.ClientSize = new System.Drawing.Size(428, 465);
             this.Controls.Add(this.decodeTab);
             this.Name = "AudioStegForm";
-            this.Text = "Form1";
+            this.Text = "AudioSteganography";
             this.decodeTab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
